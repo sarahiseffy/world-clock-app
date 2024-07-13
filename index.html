@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.45/moment-timezone-with-data-1970-2030.js"></script>
     <title>World Clock App</title>
 </head>
 
@@ -16,23 +18,23 @@
             <option value="">Select the city</option>
             <option value=london">London</option>
             <option value="new york">New York</option>
-            <option value="auckland">Auckland</option>
+            <option value="sydney">Sydney</option>
         </select>
 
-        <div class="city1">
+        <div class="city1" id="los-angeles">
             <div>
                 <h2>Los Angeles 🇺🇸</h2>
-                <div class="date1">June 30th, 2024</div>
+                <div class="date1"></div>
             </div>
-            <div class="time1">04:35:00 <small>PM</small> </div>
+            <div class="time1"></div>
 
         </div>
-        <div class="city2">
+        <div class="city2" id="sydney">
             <div>
                 <h2>Sydney🇦🇺</h2>
-                <div class="date2">June 30th, 2024</div>
+                <div class="date2"></div>
             </div>
-            <div class="time2">04:35:00 <small>PM</small></div>
+            <div class="time2"></div>
         </div>
 
     </div>
