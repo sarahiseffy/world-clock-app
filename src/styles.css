@@ -26,7 +26,7 @@ select {
 h2 {
   margin: 0;
 }
-.city1 {
+.city {
   display: flex;
   justify-content: space-between;
   margin: 25px 0 4px;
@@ -47,13 +47,6 @@ h2 {
   line-height: 36px;
 }
 
-.city2 {
-  display: flex;
-  justify-content: space-between;
-  margin: 25px 0 4px;
-  padding: 30px 0;
-  border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
-}
 .date2 {
   opacity: 0.7;
 }
@@ -63,6 +56,20 @@ h2 {
 }
 
 .time2 small {
+  font-size: 18px;
+  vertical-align: middle;
+  line-height: 36px;
+}
+
+.date3 {
+  opacity: 0.7;
+}
+.time3 {
+  font-size: 36px;
+  font-weight: normal;
+}
+
+.time3 small {
   font-size: 18px;
   vertical-align: middle;
   line-height: 36px;
