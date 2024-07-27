@@ -23,6 +23,16 @@ function updateTime() {
   newyorkTimeElement.innerHTML = newyorkTime.format(
     "h:mm:ss [<small>]A[</small>]"
   );
+//Auckland
+  let aucklandElement = document.querySelector("#auckland");
+  let aucklandDateElement = aucklandElement.querySelector(".date");
+  let aucklandTimeElement = aucklandElement.querySelector(".time");
+  let aucklandTime = moment().tz("Pacific/Auckland");
+
+  aucklandDateElement.innerHTML = aucklandTime.format("MMMM do, YYYY");
+  aucklandTimeElement.innerHTML = aucklandTime.format(
+    "h:mm:ss [<small>]A[</small>]"
+  );
 }
 
 function updateCity(event) {
@@ -44,10 +54,12 @@ function updateCity(event) {
     "A"
   )}</small></div>
   </div>
+  <a href="index.html">Show All Cities</a>
   `;
 }
 
 updateTime();
+
 setInterval(updateTime, 1000);
 
 let citiesSelectElement = document.querySelector("#city");
