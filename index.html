@@ -12,38 +12,42 @@
 </head>
 
 <body>
-<div class="container">
+    <div class="container">
 
-    <h1>World Clock</h1>
-    
-    <select name="" id="">
-        <option value="">Select the city</option>
-        <option value="london">London</option>
-        <option value="new york">New York</option>
-        <option value="auckland">Auckland</option>
-    </select>
-    
-    <div>
-        <h2>London🇬🇧</h2>
-        <div>July 27th, 2024</div>
-        <div>01:42:00 PM</div>
+        <h1>World Clock</h1>
+
+        <select name="" id="cities">
+            <option value="">Select the city</option>
+            <option value="london">London</option>
+            <option value="new york">New York</option>
+            <option value="auckland">Auckland</option>
+        </select>
+
+        <div class="city">
+            <div><!--to divide into 2 boxes using flex display-->
+                <h2>London🇬🇧</h2>
+                <div class="date">July 27th, 2024</div>
+            </div>
+
+            <div class="time">01:42:00 <small>PM</small></div>
+        </div>
+
+        <div class="city">
+            <div> <!--to divide into 2 boxes using flex display-->
+                <h2>New York🇺🇸</h2>
+                <div class="date">July 27th, 2024</div>
+            </div>
+            <div class="time">01:42:00 <small>PM</small></div>
+        </div>
+        
     </div>
     
-    <div>
-        <h2>New York🇺🇸</h2>
-        <div>July 27th, 2024</div>
-        <div>01:42:00 PM</div>
-    </div>
-    <br>
     <footer>
         This project is coded by @sarahiseffy and is <a href="https://github.com/sarahiseffy/world-clock-app"
         target="_blank">open source on github</a>
     </footer>
-    
+
     <script src="src/script.js"></script>
-
-</div>
-
 </body>
 
 </html>
