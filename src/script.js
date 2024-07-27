@@ -1,3 +1,5 @@
+// Refer to the world timezone list - https://gist.github.com/diogocapela/12c6617fc87607d11fd62d2a4f42b02a#file-moment-js-timezones-txt
+
 function updateTime() {
   //London Time
   let londonElement = document.querySelector("#london");
@@ -24,24 +26,23 @@ function updateTime() {
 }
 
 function updateCity(event) {
+  let cityTimeZone = event.target.value;
 
-    let cityTimeZone = event.target.value;
-
-    if (cityTimeZone === "current") {
+  if (cityTimeZone === "current") {
     cityTimeZone = moment.tz.guess();
-   }
-    let cityName = cityTimeZone.replace("_"," ").split("/")[1]
-    let cityTime = moment().tz(cityTimeZone);
-    let citiesElement = document.querySelector("#cities")
-    citiesElement.innerHTML = `
+  }
+  let cityName = cityTimeZone.replace("_", " ").split("/")[1];
+  let cityTime = moment().tz(cityTimeZone);
+  let citiesElement = document.querySelector("#cities");
+  citiesElement.innerHTML = `
   <div class="city">
     <div>
       <h2>${cityName}</h2>
       <div class="date">${cityTime.format("MMMM	Do YYYY")}</div>
     </div>
     <div class="time">${cityTime.format("h:mm:ss")} <small>${cityTime.format(
-      "A"
-    )}</small></div>
+    "A"
+  )}</small></div>
   </div>
   `;
 }
